@@ -1,0 +1,123 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&family=Montserrat:wght@500&family=Roboto:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+
+:root{
+    --mainColor:#FF5A5A;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.bg_mainColor{
+    background-color: var(--mainColor);
+}
+
+.text_mainColor{
+    color: var(--mainColor);
+}
+.border_mainColor{
+    border-color: var(--mainColor);
+}
+
+
+.navbar{
+    background-color: #262626;
+}
+
+.navbar_logo{
+    background-image: url('../img/envato_market-logo.svg');
+    background-repeat: no-repeat;
+    width: 200px;
+}
+
+.buy{
+    border: 2px solid var(--mainColor);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.buy:hover{
+   color: white;
+   background-color: var(--mainColor);
+   border-color: var(--mainColor) !important;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0);
+}
+.header{
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+.header span{
+    color: rgb(29, 53, 87);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 120px;
+}
+.header h1{
+    color: rgb(29, 53, 87);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+
+/* cardsDemo css */
+.cardsDemo{
+    background-color: #f6f6f6;
+}
+
+.demo-item{
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    background-color: #fff;
+    position: relative;
+   
+}
+.cardsDemo .title a{
+    color: #3f3f3f;
+}
+
+.item-img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease 0s;
+}
+
+.demo-item:hover .item-img{
+    box-shadow: 0 15px 30px rgb(0 0 0 / 15%);
+    transform: translateY(-10px);
+}
+
+/* features */
+.features i{
+    font-size: 30px;
+    color: var(--mainColor);
+    opacity: 0.8;
+    
+}
+.features p{
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.features .info h3{
+    color: #373737;
+    font-size: 18px;
+    padding-bottom: 2px;
+}
+
+/* footer */
+.footer{
+    background-color: #1B1B1C;
+}
+
+@media (min-width: 1400px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1140px !important;
+}
+}

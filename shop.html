@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <!-- icoooooooon -->
+
+    <!-- bootstrap 5.3 -->
+    <link rel="stylesheet" href="vendor/bootstarp/bootstrap.min.css">
+
+    <!-- Fontawesome 6.4 -->
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/shop.css">
+
+    <!-- Custom Minify CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.mimify.css"> -->
+
+    <!-- Media Query -->
+    <link rel="stylesheet" href="assets/css/shopmedia.css">
+</head>
+
+<body>
+     <!-- start navbar section -->
+     <nav class="navbar navbar-expand-lg pt-4 mb-2">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo-2.webp" alt="Merier Logo">
+            </a>
+            <button class="navbar-toggler bg_mainColor text-white rounded" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5 ps-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active pe-5 " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown pe-5">
+                        <a class="nav-link" href="/shop.html" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-capitalize" href="shop.html">Shop</a>
+                            </li>
+                            <li><a class="dropdown-item text-capitalize" href="single-product.html">Single product</a>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><hr class="dropdown-divider"></li> 
+                            <li><a class="dropdown-item" href="#">Login/Register</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a class="nav-link pe-5" href="#">Pages</a>
+                        </li> -->
+                    <li class="nav-item dropdown pe-5">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About</a></li>
+                            <li><a class="dropdown-item" href="account.html">Account</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <li><a class="dropdown-item" href="login-reg.html">Login/Register</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-5" href="#">Plog</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="search d-flex align-items-center rounded-pill px-2 bg-white">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <i class="fa-solid fa-magnifying-glass pe-2 text_mainColor"></i>
+                        </button>
+
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-plus ms-5 text_mainColor"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar section -->
+
+    <!-- header section -->
+    <header class="header my-2">
+        <div class="container py-5">
+            <div class="row title">
+                <div class="title col-md-12 d-flex">
+                    <a href="index.html" class="pe-2 text-decoration-none">Home</a>
+                    <p>/ </p>
+                    <a href="shop.html" class="ps-2 text-decoration-none">Products</a>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-sm-12">
+                        <h1 class="text-capitalize">All trending products</h1>
+                    </div>
+                    <div class="showing col-md-4 col-sm-12 text-end">
+                        <p class="pt-3">Showing 09 Results</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- shop top bar area section -->
+    <section class="topbar-area border-bottom">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-md-4">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle border-0 bg-white text-black py-0 my-0"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trending
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Trending</a></li>
+                            <li><a class="dropdown-item" href="#">Featured</a></li>
+                            <li><a class="dropdown-item" href="#">Best Selling</a></li>
+                            <li><a class="dropdown-item" href="#">Price: low to high</a></li>
+                            <li><a class="dropdown-item" href="#">Price: high to low</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4  d-flex">
+                    <p class="pe-4">Pricing</p>
+                    <input type="range" class="form-range" min="1000" max="8000" id="customRange2">
+                    <!-- <span class="price-minvalue">$1,000</span> -->
+                    <span class="price-maxvalue ps-4">$8,000</span>
+
+                </div>
+
+                <div class="onSale col-md-4 d-flex justify-content-center">
+                    <p>On Sale :</p>
+                    <div class="dropdown yesbtn">
+                        <button class="btn btn-secondary dropdown-toggle border-0 bg-white text-black py-0 my-0"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Yes
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Yes</a></li>
+                            <li><a class="dropdown-item" href="#">No</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- product-categories-area -->
+    <section class="product-categories my-5 py-5">
+        <div class="container">
+            <div class="row row-gap-5">
+                <div class="col-sm-4 col-lg-2 mb-5">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/shirt.webp" alt="clothes" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Clothes</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/shoes.webp" alt="shoes" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Shoes</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/jacket.webp" alt="shirts" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Shirts</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/pant.webp" alt="pants" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Pants</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/bag.webp" alt="bags" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Bags</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="product-cat pt-5 pb-2 text-center position-relative">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="prodact-image position-absolute start-50 top-0 translate-middle">
+                                <img src="assets/img/hat.webp" alt="hats" class="w-100">
+                            </div>
+                            <h2 class="pt-5">Hats</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start best products section -->
+    <section class="best-products my-5 pb-5">
+        <div class="container">
+            <div class="products mt-5">
+                <div class="row row-gap-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/13.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Casual Prince</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/19.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Fit Wool Suit</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/20.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Slightly jackets</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/16.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Red Perspiciatis</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/21.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Style Modern Dress</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/22.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Star Women pants</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/23.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Flower Print dress</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/17.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Winter Sprit</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product p-5">
+                            <div>
+                                <a class="mx-0 px-0 position-relative" href="#">
+                                    <img src="assets/img/24.webp" alt="t-shirt" class="w-100">
+                                    <button class="rounded-pill px-3 py-1 position-absolute border-0">
+                                        New
+                                    </button>
+
+                                    <div class="d-flex flex-column row-gap-2 action">
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center bg_mainColor">
+                                            <i class="fa fa-exchange"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-info mt-2">
+                                    <h3>
+                                        <a class="text-decoration-none" href="#">Slightly Hoody</a>
+                                    </h3>
+                                    <div class="price d-flex align-items-center">
+                                        <h3>$650.00</h3>
+                                        <span class="ps-2">$650.00</span>
+                                    </div>
+                                </div>
+                                <div class="icon rounded-circle d-flex justify-content-center align-items-center">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- latest blog section -->
+    <section class="connects my-5">
+        <div class="container px-5">
+            <div class="connect py-5 mx-5">
+                <h5 class="mb-4">Connect with us | merier</h5>
+                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <!-- form -->
+                <form class="d-flex mb-4 bg-white">
+                    <input type="email" class="form-control border-0" placeholder="Email address">
+                    <button class="btn-submit border-0 m-2 text-center" type="submit">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- start footer -->
+    <section class="footer mt-5 pt-5 mx-4">
+        <div class="footer-content p-5">
+            <div class="row pt-5 px-md-5">
+                <div class="col-md-6 col-lg-3 pe-md-5">
+                    <div class="footerLogo">
+                        <img src="assets/img/logo-2.webp" alt="Merier Logo" class="mb-5">
+                        <p>Merier fashion is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="icons d-flex mb-sm-5">
+                            <i class="fa-brands fa-facebook-f pe-5"></i>
+                            <i class="fa-brands fa-linkedin-in pe-5"></i>
+                            <i class="fa-brands fa-twitter pe-5"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 ps-md-5 mt-sm-4 disappear">
+
+                    <ul class="ecommerce p-0">
+                        <h3 class="mb-5">Ecommerce</h3>
+                        <li class="pb-3">
+                            <a href="#">Products</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Your Cart</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Your Order</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Tracking</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Wishlist</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3 ps-md-5 mt-sm-4 pe-2 disappear">
+                    <h3 class="mb-5">Support</h3>
+                    <ul class="support p-0">
+                        <li class="pb-3">
+                            <a href="#">Help</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Live Chat</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Product Detail</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Tracking</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3 ps-md-5 mt-sm-4 disappear">
+                    <h3 class="mb-5">Products</h3>
+                    <ul class="products p-0">
+                        <li class="pb-3">
+                            <a href="#">Man</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Women</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">KID</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Jackets</a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="#">Others</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- dropdown -->
+                <div class="dropdown-list d-none d-none">
+                    <div class="list-item d-flex justify-content-between mb-5">
+                        <li class="nav-item dropdown ps-3">
+                            <a class="nav-link text-white" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Ecommerce
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item pb-3"><a href="#">Products</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Your Cart</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Your Order</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Tracking</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Wishlist</a></li>
+                            </ul>
+                        </li>
+                        <div class="pe-4">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+
+                    <div class="list-item d-flex justify-content-between mb-5">
+                        <li class="nav-item dropdown ps-3">
+                            <a class="nav-link text-white" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item pb-3"><a href="#">Help</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Live Chat</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Product Detail</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Tracking</a></li>
+                            </ul>
+                        </li>
+                        <div class="pe-4">
+                            <i class="fa-solid fa-plus" role="button" data-bs-toggle="dropdown"></i>
+                        </div>
+                    </div>
+
+                    <div class="list-item d-flex justify-content-between mb-5">
+                        <li class="nav-item dropdown ps-3">
+                            <a class="nav-link text-white" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item pb-3"><a href="#">Man</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Women</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">KID</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Jackets</a></li>
+                                <li class="dropdown-item pb-3"><a href="#">Others</a></li>
+                            </ul>
+                        </li>
+                        <div class="pe-4">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row payment d-flex ps-md-5 pt-5">
+
+                <div class="col-md-6 col-sm-4 justify-content-start">
+                    <img src="assets/img/payment.webp" alt="Payment Cards">
+
+                </div>
+                <div class="col-md-6 col-sm-8 text-end pe-4">
+                    <p>&copy; 2021 Merier. Made with <i class="fa-solid fa-heart"></i> by <span>Codecarnival.</span></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="vendor/bootstarp/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

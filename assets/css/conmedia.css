@@ -1,0 +1,62 @@
+@media (max-width:991px) {
+    .contactInfo .cardInfo h2{
+        font-size: 20px;
+    }
+    .contactInfo .row{
+        row-gap: 3;
+    }
+}
+@media (max-width:567px) {
+    .footer .disappear{
+        display: none !important;
+    }
+    .footer .dropdown-list{
+        display: block !important;
+    }
+    .list-item{
+        background-color: #1D3557;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+    }
+    .footer .payment{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    
+    .footerLogo {
+        margin-bottom: 30px !important;
+    }
+
+  
+}
+@media (min-width:568px) and (max-width:767px) {
+    .footer .disappear{
+        display: none !important;
+    }
+    .footer .dropdown-list{
+        display: block !important;
+    }
+    .list-item{
+        background-color: #1D3557;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+    }
+    .footer .payment{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    
+    .footerLogo {
+        margin-bottom: 30px !important;
+    }
+
+  
+}
